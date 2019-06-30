@@ -1,0 +1,90 @@
+
+/*  =====  INDEX/ABOUT PAGE  =====  */
+
+#index-sidebar #ko-logo.sidebar-image { margin-bottom: -20px; }
+
+
+
+/*  =====  PORTFOLIO PAGE  =====  */
+
+#portfolio-sidebar #linkedin-logo.sidebar-image { margin: 32px 50px 38px; }
+#portfolio-sidebar #github-logo.sidebar-image { margin: 28px 45px 46px; }
+#portfolio-sidebar #ko-logo.sidebar-image { margin: 32px 50px 42px; }
+
+
+
+.project {
+	width: 274px;
+	margin: 20px 0 25px;
+	overflow: auto;
+	position: relative;
+	float: left;
+}
+
+.project:nth-child(even) { margin-right: 40px; }
+
+.project img { width: 100%; }
+
+.project h3 {
+	position: absolute; 	bottom: 10px;
+	border-bottom: 0;
+	background: rgba(255, 255, 255, 0.8);
+	color: #554b5a;
+	line-height: 30px;
+	margin-bottom: 0;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+
+
+/*  =====  CONTACT PAGE =====  */
+
+.main-content { padding-bottom: 22px; }
+
+#contact ul { margin: 10px 0px; }
+
+#contact li { margin-bottom: 10px; }
+
+label, input[type=text], input[type=email], textarea {
+	display: block;
+	width: 100%;
+}
+
+input[type=text], input[type=email], textarea {
+	border: 1px solid #898989;
+	height: 35px;
+  	margin: 5px 0px 15px;
+	padding: 0px 10px;
+	font-size: 14px;
+}
+
+input[type=submit] {
+  background: #2a292c;
+	border: 0 none;
+	color: #898989;
+	font-size: 18px;
+	padding: 10px 30px;
+	cursor: pointer;
+}
+
+textarea {
+	border: 1px solid #d6d6d6;
+	margin: 5px 0px;
+  padding: 10px;
+	height: 200px;
+}
+
+label {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #999;
+}
+
+button {
+	background-color: #2f4ca3;
+	color: white;
+	font-size: 12px;
+	padding: 5px 15px;
+}

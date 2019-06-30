@@ -1,7 +1,10 @@
 
+/*  =====  LAYOUT  =====  */
+
+* { box-sizing: border-box; }
 
 body {
-	background: linear-gradient(to bottom,  #544759 0%,#9b8d8a 50%,#9b8d8a 53%,#544759 100%);
+	background: linear-gradient(to bottom, #2f4ca3 0%, #9b8d8a 50%, #9b8d8a 53%, #2f4ca3 100%);
 	font-family: font1-roman;
 	font-size: 0.9em;
 	font-kerning: 0.01em;
@@ -12,10 +15,133 @@ body {
 
 body strong { font-family: font1-bold; }
 
+/*  navbar  */
+#header {
+	background: rgba(255, 255, 255, 0.8);
+  background: #2a292c;
+	margin-bottom: 30px;
+	width: 100%;
+	z-index: 100;
+	overflow:auto;
+}
+
 .navbar-brand.mb-1.h1 {	margin-top: 0.25rem; }
 
 .bg-dark { background-color: #2b292d !important; }
 
+#my-name {
+	width: 250px;
+	font-family: font1-bold;
+	font-size: 30px;
+	color:#898989;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+}
+
+nav {
+	margin: 31px 22px 0px 0px;
+	float: right;
+}
+
+nav a {
+	border-left: 1px solid #898989;
+	color: #898989;
+	line-height: 18px;
+	margin-left: 15px;
+	padding-left: 15px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav a:first-child { border-left: none; }
+
+.main-content {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 30px;
+	width: 650px;
+	float:left;
+}
+
+
+
+/*  =====  INDEX/ABOUT PAGE (MUST BE DEFINED BEFORE MEDIA QUERIES)  =====  */
+
+.profile-image {
+	width: 200px; height: auto;
+  border-radius: 5px;
+  margin: 10px 0px 0px 25px;
+  -webkit-transform: scaleX(-1);
+  float: right;
+}
+
+
+
+/*  =====  MEDIA QUERIES  =====  */
+
+@media screen and (max-width:980px) {
+	.container{ max-width: 735px; }
+
+	.main-content{ max-width: 450px; }
+
+	.profile-image, .project{ 	width: 100%; }
+}
+
+@media screen and (max-width:768px) {
+	.container { max-width: 720px; }
+
+	.sidebar { width: 100%; }
+
+	.main-content {
+  	  max-width: 720px;
+		width: 100%;
+	}
+
+	.bio-image { width:175px; }
+
+  .project { width: 308px; }
+}
+
+
+@media screen and (max-width:640px) {
+	#head-container{
+		position: static;
+		margin-bottom: 0px;
+	}
+
+	#label { width:100%;	 }
+
+	#outer-container, .connect {
+		max-width: 600px;
+		padding-top: 20px;
+	}
+
+	.profile-image { width:100%; }
+
+	.project { width: 100%; }
+	
+	nav {
+		margin-top: 0px;
+		padding: 15px;
+		float:left;
+	}
+
+	nav a { padding: 0 65px; }
+}
+
+
+
+/*  =====  CONTENT  =====  */
+
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	clear: both;
+}
 
 .white-wrapper {
 	background: rgba(255, 255, 255, 0.5);
@@ -25,69 +151,63 @@ body strong { font-family: font1-bold; }
 	overflow: auto;
 }
 
-#index-content h1 { color: #554b5a; }
 
-#index-content hr {
-	background-color: #554b5a;
-	border: none;
-	height: 2px;
+/*  Sidebar  */
+
+.sidebar{
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 30px;
+	width: 270px;
+	float: right;
 }
 
-#index-content .row { margin-top: 10px; }
-
-#index-content .col-md-4 {
-	text-align: center;
+.sidebar{
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 30px;
+	width: 270px;
 }
 
-#index-content .row .caption {
-	font-size: 13px;
+.sidebar h2 {
+	border-bottom: 2px solid #898989;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+	line-height: 22px;
+}
+
+.sidebar-image { width: 128px; }
+
+
+#linkedin-logo.sidebar-image { margin: 10px 50px 11px; }
+#github-logo.sidebar-image { margin: 28px 45px 19px; }
+#ko-logo.sidebar-image { margin: 32px 50px -11px; }
+
+
+
+/*  =====  TEXT  ====  */
+
+h1, h2 {
+	font-family: font1-bold;
+	font-size: 2.0em;
 	color: #554b5a;
-	padding: 4px 0px;
-	text-align: center;
 }
 
-#index-content .repo-link {
-	font-size: 12px;
-	color: #2f4ca3;
-	margin: 0px 10px;
+h1 {
+	border-bottom: 2px solid #aaaaaa;
+	line-height: 50px;
+	padding-bottom: 20px;
 }
 
+h2 { font-size: 22px; }
 
-
-/*  =====  ABOUT ME  =====  */
-
-.img-thumbnail {
-	border: none;
-	box-shadow: 3px 3px 5px 1px #778;
-	padding: 0px;
-	margin: 0px 10px 10px 0px;
-	float: left;
-}
-
-
-
-/*	=====  CONTACT PAGE	=====	*/
-
-label {
-	font-family: sans-serif;
-	font-size: 12px;
-	color: #999;
-}
-
-input, textarea {
-	margin: 5px 0px 15px;
-	width: 99%;
-}
-
-textarea {
-	border: 1px solid #d6d6d6;
-	margin: 5px 0px;
-	height: 200px;
-}
-
-button {
-	background-color: #2f4ca3;
-	color: white;
-	font-size: 12px;
-	padding: 5px 15px;
+p {
+	font-family: font1-roman;
+	font-size: 1em;
+	color: #595959;
+	line-height: 1.5em;
+	margin-top: 10px;
+	text-align: justify;
 }
